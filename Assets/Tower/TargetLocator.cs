@@ -20,6 +20,14 @@ public class TargetLocator : MonoBehaviour
 
     void AimWeapon()
     {
-        weapon.LookAt(target);
+        if (target != null){
+            var pos = target.position;
+            pos = new Vector3(pos.x, 2f, pos.z);
+            weapon.LookAt(pos);
+        } else {
+            ParticleSystem particleSys =  this.gameObject.GetComponentInChildren<ParticleSystem>();
+            var em = particleSys.emission;
+            em.enabled = false;
+        }
     }
 }
