@@ -214,8 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92acc860543e6c448cff186c3d0067a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBalance: 300
+  startingBalance: 500
   currentBalance: 0
+  displayBalance: {fileID: 945824921}
 --- !u!4 &211214346
 Transform:
   m_ObjectHideFlags: 0
@@ -357,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1714265503301791812, guid: b3b67ed12b42ca34eb08de439ad3e2dd, type: 3}
       propertyPath: m_TagString
-      value: Path
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3370849707565827977, guid: b3b67ed12b42ca34eb08de439ad3e2dd, type: 3}
       propertyPath: m_RootOrder
@@ -420,8 +421,8 @@ GameObject:
   m_Component:
   - component: {fileID: 466611219}
   m_Layer: 0
-  m_Name: PathTiles
-  m_TagString: Untagged
+  m_Name: Path
+  m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -943,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5520421274776786981, guid: 9af77ac1c9815394dbb9cc297e0a8f3f, type: 3}
       propertyPath: m_TagString
-      value: Path
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8471723284502081512, guid: 9af77ac1c9815394dbb9cc297e0a8f3f, type: 3}
       propertyPath: m_RootOrder
@@ -1003,7 +1004,7 @@ GameObject:
   - component: {fileID: 945824922}
   - component: {fileID: 945824921}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Gold Balance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1025,7 +1026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 15, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &945824921
@@ -1057,8 +1058,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278249943
+  m_fontColor: {r: 0.8421484, g: 0.9150943, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1576,7 +1577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5536410031760815503, guid: 44a62888bee75c142b375361eb7016d1, type: 3}
       propertyPath: m_TagString
-      value: Path
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8491718519773299266, guid: 44a62888bee75c142b375361eb7016d1, type: 3}
       propertyPath: m_RootOrder
@@ -1737,7 +1738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2171266782643189237, guid: 6585c4fea88ef5d4c92f75b5e4bdfb8b, type: 3}
       propertyPath: m_TagString
-      value: Path
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2822632394031350328, guid: 6585c4fea88ef5d4c92f75b5e4bdfb8b, type: 3}
       propertyPath: m_RootOrder
@@ -1920,7 +1921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2171266782643189237, guid: 6585c4fea88ef5d4c92f75b5e4bdfb8b, type: 3}
       propertyPath: m_TagString
-      value: Path
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2822632394031350328, guid: 6585c4fea88ef5d4c92f75b5e4bdfb8b, type: 3}
       propertyPath: m_RootOrder
@@ -2112,7 +2113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2171266782643189237, guid: 6585c4fea88ef5d4c92f75b5e4bdfb8b, type: 3}
       propertyPath: m_TagString
-      value: Path
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2822632394031350328, guid: 6585c4fea88ef5d4c92f75b5e4bdfb8b, type: 3}
       propertyPath: m_RootOrder
@@ -2187,7 +2188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2171266782643189237, guid: 6585c4fea88ef5d4c92f75b5e4bdfb8b, type: 3}
       propertyPath: m_TagString
-      value: Path
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2822632394031350328, guid: 6585c4fea88ef5d4c92f75b5e4bdfb8b, type: 3}
       propertyPath: m_RootOrder
