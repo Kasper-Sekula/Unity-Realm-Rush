@@ -40,7 +40,7 @@ public class TargetLocator : MonoBehaviour
         float targetDistance = Vector3.Distance(transform.position, target.position);
         if (target != null){
             var pos = target.position;
-            pos = new Vector3(pos.x, 2f, pos.z);
+            pos = new Vector3(pos.x, 4f, pos.z);
             weapon.LookAt(pos);
 
             if(targetDistance < range){
