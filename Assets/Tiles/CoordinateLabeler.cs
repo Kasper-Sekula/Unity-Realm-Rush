@@ -10,36 +10,36 @@ public class CoordinateLabeler : MonoBehaviour
     [SerializeField] Color defaultColor = Color.white;
     [SerializeField] Color blockedColor = Color.gray;
     [SerializeField] Color exploredColor = Color.yellow;
-    [SerializeField] Color pathColor = new Color(1f, 0.5f, 0); // Orange
+    [SerializeField] Color pathColor = new Color(1f, 0.5f, 0f);
+
     TextMeshPro label;
     Vector2Int coordinates = new Vector2Int();
     GridManager gridManager;
 
-    void Awake() 
-    {
+    void Awake() {
         gridManager = FindObjectOfType<GridManager>();
-
         label = GetComponent<TextMeshPro>();
         label.enabled = false;
-        
+
         DisplayCoordinates();
     }
 
-    void Update() 
+    void Update()
     {
-        if (!Application.isPlaying)
-        {
-            DisplayCoordinates();
-            UpdateObjectName();
-        }
+       if(!Application.isPlaying)
+       {
+           DisplayCoordinates();
+           UpdateObjectName();
+           label.enabled = true;
+       }
 
-        SetLabelColor();
-        ToggleLabels();
+       SetLabelColor();
+       ToggleLabels();
     }
 
     void ToggleLabels()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if(Input.GetKeyDown(KeyCode.C))
         {
             label.enabled = !label.IsActive();
         }
@@ -51,7 +51,7 @@ public class CoordinateLabeler : MonoBehaviour
 
         Node node = gridManager.GetNode(coordinates);
 
-        if(node == null) { return ;}
+        if(node == null) { return; }
 
         if(!node.isWalkable)
         {
@@ -64,18 +64,21 @@ public class CoordinateLabeler : MonoBehaviour
         else if(node.isExplored)
         {
             label.color = exploredColor;
-        } else
+        }
+        else
         {
             label.color = defaultColor;
         }
     }
 
-    void DisplayCoordinates()
+    void DisplayCoordinates() 
     {
-        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x);
-        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.z);
+        if(gridManager == null) { return; }
 
-        label.text= $"{coordinates.x} , {coordinates.y}";
+        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / gridManager.UnityGridSize);
+        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / gridManager.UnityGridSize);
+
+        label.text = coordinates.x + "," + coordinates.y;
     }
 
     void UpdateObjectName()
